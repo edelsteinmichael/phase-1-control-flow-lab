@@ -13,11 +13,24 @@ function scuberGreetingForFeet(distance){
   
 
 function ternaryCheckCity(city){
-  const message = city === 'NYC' ? "Ok, sounds good." : "No go."
+  let message = (city === 'NYC' ? 'Ok, sounds good.' : 'No go.')
   return message;
 }
 
 
-function switchOnCharmFromTip(){
- 
+function switchOnCharmFromTip(tipType){
+  let response
+
+  switch (tipType) {
+    case generous:
+      response = 'Thank you so much.'
+      break;
+    case 'not as generous':
+      response = 'Thank you.'
+      break;
+    default:
+      console.log('Bye');
+      break;
+  }
+
 }
